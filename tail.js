@@ -1,4 +1,4 @@
-var assertEqual = function(actual, expected) {
+let assertEqual = function(actual, expected) {
   let equal = actual === expected;
   console.log(`Assertion ${equal ? "Passed" : "Failed"}: ${actual} ${equal ? "" : "!"}== ${expected}`);
 };
@@ -7,9 +7,9 @@ var assertEqual = function(actual, expected) {
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 
 
-var tail = (list) => {
-  let tailList=[];
-  for (let i = 1 ; i < list.length ; i ++ ){
+let tail = (list) => {
+  let tailList = [];
+  for (let i = 1; i < list.length; i ++) {
     tailList = [... tailList , list[i]];
   }
 
@@ -17,7 +17,7 @@ var tail = (list) => {
 
 };
 
-var result = tail (words);
+let result = tail(words);
 
 assertEqual(words.length, 3);
 assertEqual(result.length, 2); // ensure we get back two elements
