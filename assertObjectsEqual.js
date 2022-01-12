@@ -35,9 +35,22 @@ var eqObjects = function (object1, object2) {
   return true;
 };
 
+// FUNCTION IMPLEMENTATION
+const assertObjectsEqual = function(actual, expected) {
+  // Implement me!
+  const inspect=require('util').inspect;
+  let equal = eqObjects(actual,expected);
+  console.log(
+    `Assertion ${equal ? "Passed" : "Failed"}: ${inspect(actual)} ${
+      equal ? "=" : "!"
+    }== ${inspect(expected)}`
+  );
+
+};
+
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), true);
+assertObjectsEqual(cd,dc);
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, cd2), false);
+assertObjectsEqual(cd,cd2);
