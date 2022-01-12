@@ -1,6 +1,6 @@
 var assertEqual = function(actual, expected) {
   let equal = actual === expected;
-  console.log(`Assertion ${equal ? "Passed" : "Failed"}: ${actual} ${equal ? "" : "!"}== ${expected}`);
+  console.log(`Assertion ${equal ? "Passed" : "Failed"}: ${actual} ${equal ? "=" : "!"}== ${expected}`);
 };
 
 var eqArrays = (array1,array2) => {
