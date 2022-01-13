@@ -11,5 +11,6 @@ var eqArrays = (array1, array2) => {
 var assertArraysEqual = (array1, array2) => {
   let equal = eqArrays(array1, array2);
 
-  console.log(`Assertion ${equal ? "Passed" : "Failed"}: ${actual} ${equal ? "=" : "!"}== ${expected}`);
+  console.log(`Assertion ${equal ? "Passed" : "Failed"}: ${array1} ${equal ? "=" : "!"}== ${array2}`);
 };
+
