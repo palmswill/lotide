@@ -1,8 +1,4 @@
-var assertEqual = function(actual, expected) {
-  let equal = actual === expected;
-  console.log(`Assertion ${equal ? "Passed" : "Failed"}: ${actual} ${equal ? "" : "!"}== ${expected}`);
-};
-
+const assertEqual = require("./assertEqual");
 
 
 const head = (list) => {
@@ -10,5 +6,6 @@ const head = (list) => {
 
 };
 
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+
+
+module.exports= head ;
