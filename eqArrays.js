@@ -1,7 +1,4 @@
-var assertEqual = function(actual, expected) {
-  let equal = actual === expected;
-  console.log(`Assertion ${equal ? "Passed" : "Failed"}: ${actual} ${equal ? "=" : "!"}== ${expected}`);
-};
+
 
 var eqArrays = (array1,array2) => {
   if (array1.length !== array2.length) return false;
@@ -14,4 +11,6 @@ var eqArrays = (array1,array2) => {
 
 }
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, "3"]), true); // => should PASS
+
+
+module.exports = eqArrays; 
