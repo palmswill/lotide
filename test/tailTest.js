@@ -1,11 +1,13 @@
 const tail = require("../tail");
-const assertEqual=require("../assertEqual")
+const eqArrays=require("../eqArrays");
+const assert = require('chai').assert;
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 
-var result = tail(words);
 
-assertEqual(words.length, 3);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs");
+describe("#tail", () => {
+  it(`returns ["Lighthouse", "Labs"] for ["Yo Yo", "Lighthouse", "Labs"]`, () => {
+    assert.strictEqual(eqArrays(tail(["Yo Yo", "Lighthouse", "Labs"]),["Lighthouse", "Labs"]),true);
+  });
+  
+});
